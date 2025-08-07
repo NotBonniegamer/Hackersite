@@ -1,1 +1,1 @@
-# This Website and Reposetory is for education only
+# This Website and Repository is for education only
