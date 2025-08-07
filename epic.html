@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>Epic Scanner</title>
+  <style>
+    body { background: #0d0d0d; color: #00ffcc; font-family: monospace; padding: 40px; }
+    button, a { background: #1a1a1a; color: #00ffcc; border: 1px solid #00ffcc; padding: 10px; margin-top: 10px; text-decoration: none; display: inline-block; }
+    #output { margin-top: 20px; white-space: pre-wrap; }
+  </style>
+</head>
+<body>
+  <h1>🎮 Epic Games Scanner</h1>
+  <button onclick="scan()">Scannen</button>
+  <div id="output"></div>
+  <a href="index.html">⬅ Zurück</a>
+
+  <script>
+    function scan() {
+      const users = ["EpicGhost", "FortByte", "UnrealSniper"];
+      const emails = ["ghost@epicgames.com", "fortbyte@glitch.io", "sniper@unreal.dev"];
+      const pass = ["epicAccess", "fortniteKey", "unrealMatrix"];
+
+      const user = users[Math.floor(Math.random() * users.length)];
+      const email = emails[Math.floor(Math.random() * emails.length)];
+      const passw = pass[Math.floor(Math.random() * pass.length)];
+
+      document.getElementById("output").innerText = 
+        `Verbindung zu Epic Games wird hergestellt...\nAuthentifizierung läuft...\nAccount gefunden ✅\nBenutzername: ${user}\nE-Mail: ${email}\nPasswort: ${passw}\nZugriff gewährt ✅ \n\nBitte beachte, dass dies nur eine Simulation ist und keine echten Daten generiert werden.`;
+    }
+  </script>
+</body>
+</html>

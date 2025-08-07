@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Steam Generator</title>
+    <style>
+        body {
+            background: #0d0d0d;
+            color: #00ffcc;
+            font-family: monospace;
+            padding: 40px;
+        }
+        button, a { 
+            background: #1a1a1a; 
+            color: #00ffcc; 
+            border: 1px solid #00ffcc; 
+            padding: 10px; margin-top: 10px; 
+            text-decoration: none; 
+            display: inline-block; 
+        }
+        #output {
+            margin-top: 20px;
+            white-space: pre-wrap;
+        }
+    </style>
+</head>
+<body>
+    <h1>🔓 Steam Account Generator</h1>
+    <button onclick="generate()">Generieren</button>
+    <div id="output"></div>
+    <a href="index.html">⬅ Zurück</a>
+
+    <script>
+        function generate() {
+            const usernames = ["Ghost.exe", "SteamHunter", "ValveSniper", "ByteStorm", "CyberNinja"];
+            const emails = ["ghost@steam.net", "userhunter@valve.org2", "sniper@darkmail.io", "steamfan@darkmail.de", "playerXvalve.com"];
+            const passwords = ["steamAccess01", "hunterKey99", "matrixValve", "HackingIsCool", "1234567890"];
+            
+            const user = usernames[Math.floor(Math.random() * usernames.length)];
+            const email = emails[Math.floor(Math.random() * emails.length)];
+            const password = passwords[Math.floor(Math.random() * passwords.length)];
+
+            document.getElementById("output").innerText = 
+                `Verbindung zu Steam wird hergestellt... \nAccount gefunden ✅ \nBenutzername: ${user} \nE-Mail: ${email} \nPasswort: ${password} \nZugriff gewährt ✅ \n\nBitte beachte, dass dies nur eine Simulation ist und keine echten Daten generiert werden.`;
+        }
+    </script>
+</body>
+</html>
